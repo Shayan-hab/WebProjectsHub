@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Cart with Applet</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-content">
+        <div class="header-logo">
+          <span class="gear-icon"></span>
+          <h1>EASY Cart</h1>
+          <p>E-Commerce Shopping Cart System</p>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li><a href="#" class="nav-link active">Home</a></li>
+            <li><a href="#products" class="nav-link">Products</a></li>
+            <li>
+              <a href="#cartList" class="nav-link"
+                >Cart (<span id="cartCount">0</span>)</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>Shopping Cart System</h1>
+
+      <!-- Event Phase Toggle -->
+      <div class="phase-control">
+        <button id="phaseToggle">Switch to Capturing</button>
+        <span id="phaseStatus">Mode: Bubbling</span>
+      </div>
+
+      <!-- Java Applet Section -->
+      <div class="applet-section">
+        <h2>Cart Counter</h2>
+        <applet
+          code="CounterApplet.class"
+          archive="https://example.com/applets/counter.jar"
+          width="200"
+          height="50"
+        >
+          <p>
+            Fallback: Applet not supported. Using JavaScript counter instead.
+          </p>
+        </applet>
+        <canvas
+          id="jsCounter"
+          width="200"
+          height="50"
+          style="display: none"
+        ></canvas>
+      </div>
+
+      <!-- Products -->
+      <section id="products" class="products">
+        <h2>Available Items</h2>
+        <div
+          class="item"
+          data-id="1"
+          data-name="Smartphone"
+          data-price="599.99"
+        >
+          <span>Smartphone - $599.99</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-id="2" data-name="Tablet" data-price="399.99">
+          <span>Tablet - $399.99</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <div
+          class="item"
+          data-id="3"
+          data-name="MicroSD Card"
+          data-price="456.99"
+        >
+          <span>MicroSD Card - $456.99</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <div
+          class="item"
+          data-id="4"
+          data-name="BoAI SmartWatch"
+          data-price="699.99"
+        >
+          <span>BoAI SmartWatch - $699.99</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <div class="item" data-id="5" data-name="Charger" data-price="19.99">
+          <span>Charger - $19.99</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </section>
+
+      <!-- Cart -->
+      <section class="cart">
+        <h2>Cart</h2>
+        <ul id="cartList"></ul>
+        <p>Total: $<span id="totalPrice">0.00</span></p>
+        <div class="coupon">
+          <input type="text" id="couponCode" placeholder="Coupon code" />
+          <button id="applyCoupon">Apply</button>
+          <span id="couponStatus"></span>
+        </div>
+      </section>
+
+      <!-- Logs -->
+      <section class="logs">
+        <h2>Interaction Logs</h2>
+        <pre id="logOutput"></pre>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-wave"></div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: p229157@pwr.nu.edu.pk</p>
+          <p>Phone: 0303-___________</p>
+          <p>Developer Name: Shayan Rasool</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#products">Shop</a></li>
+            <li><a href="#cartList">Cart</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Stay Updated</h3>
+          <form>
+            <input type="email" placeholder="Your email" disabled />
+            <button type="submit" disabled>Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="footerYear"></span> EASY Cart. All rights reserved.
+        </p>
+        <div class="social-icons">
+          <a href="#" class="social-icon twitter"></a>
+          <a href="#" class="social-icon facebook"></a>
+          <a href="#" class="social-icon linkedin"></a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
