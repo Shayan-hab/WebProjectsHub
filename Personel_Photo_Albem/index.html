@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Photo Album</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
+      .album-container {
+        width: 400px;
+        margin: auto;
+        border: 2px solid gray;
+        background-color: white;
+        padding: 10px;
+      }
+      .buttons {
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 5px 15px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .image-container img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="album-container">
+      <h2>My Personal Photo Album</h2>
+      <h3>Designed by Shayan Rasool</h3>
+
+      <div class="buttons">
+        <button onclick="showImage('birthday')">Birthday</button>
+        <button onclick="showImage('pets')">Pets</button>
+        <button onclick="showImage('cars')">Cars</button>
+      </div>
+
+      <div class="image-container">
+        <img id="albumImage" src="image1.jpg" alt="Birthday Image" />
+      </div>
+    </div>
+
+    <script>
+      function showImage(category) {
+        var image = document.getElementById("albumImage");
+
+        if (category === "birthday") {
+          image.src = "image1.jpg";
+          image.alt = "Birthday Image";
+        } else if (category === "pets") {
+          image.src = "image2.jpg";
+          image.alt = "Pets Image";
+        } else if (category === "cars") {
+          image.src = "image3.jpg";
+          image.alt = "Cars Image";
+        }
+      }
+    </script>
+  </body>
+</html>
