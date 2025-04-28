@@ -14,11 +14,11 @@ Here’s a list of the web projects included in this repository:
 - **Description**:The Online Book Request System is a user-friendly web platform designed to streamline the process of requesting and managing books for students, faculty, and staff at educational institutions. Users can browse a digital catalog, submit book requests, and track their status in real-time. The system supports features like automated notifications, availability checks, and integration with library databases, ensuring efficient access to resources. With an intuitive interface and robust functionality, it simplifies book borrowing and enhances the library experience.
 - **Technologies**: HTML, CSS, JavaScript, PHP
 
-  ### 3. Quote Generator
+### 3. Quote Generator
 - **Description**:An AI-powered quote generator that delivers personalized, inspiring quotes via API queries, perfect for apps and websites.
 - **Technologies**: HTML, CSS, JavaScript, API Integration
 
- ### 3. Personal Photo Albem
+### 4. Personal Photo Albem
 - **Description**:A secure, user-friendly personal photo album app for organizing, storing, and sharing your cherished memories with ease.
 - **Technologies**: HTML, CSS, JavaScript
 
